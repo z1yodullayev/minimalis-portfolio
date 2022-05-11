@@ -1,0 +1,109 @@
+.site-header {
+    padding: 60px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        flex-shrink: 0;
+        transition: all 1s;
+    }
+
+    &__logo:hover {
+        opacity: 0.8;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    &__nav-list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+    }
+
+    &__nav-link {
+        padding: 16px;
+        text-decoration: none;
+        font-family: 'Public Sans';
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #33323D;
+        transition: all 0.6s;
+    }
+
+    &__nav-link:hover {
+        color: #5FB4A2;
+        opacity: 0.8;
+    }
+
+    &__nav-link:active {
+        color: black;
+        opacity: 0.8;
+    }
+
+    &__hamburger {
+        border: none;
+        background-color: transparent;
+        display: none;
+        cursor: pointer;
+        background-image: url(/images/hamburger.svg);
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+    }
+
+}
+
+@media only screen and (max-width:689px) {
+    .site-header {
+        position: relative;
+        padding: 18px 0;
+
+        &__nav {
+            display: none;
+        }
+
+        &__hamburger {
+            display: inline-block;
+        }
+    }
+
+    .site-header--open .site-header__nav {
+        position: absolute;
+        display: block;
+        padding: 40px;
+        top: 100%;
+        left: 0%;
+        background-color: #0E8784;
+        width: 100%;
+        border-radius: 5px;
+
+    }
+
+
+    .site-header--open .site-header__nav-list {
+        flex-direction: column;
+    }
+
+    .site-header--open .site-header__hamburger {
+        background-image: url(/images/arrows-to-circle-solid.svg);
+    }
+
+    .site-header--open .site-header__nav-link {
+        color: beige;
+        margin-bottom: 130px;
+    }
+}

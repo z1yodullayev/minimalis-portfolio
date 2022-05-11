@@ -393,6 +393,126 @@ img {
   padding: 0 20px;
 }
 
+.site-header {
+  padding: 60px;
+}
+
+.site-header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.site-header__logo {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.site-header__logo:hover {
+  opacity: 0.8;
+}
+
+.site-header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+}
+
+.site-header__nav-list {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.site-header__nav-link {
+  padding: 16px;
+  text-decoration: none;
+  font-family: 'Public Sans';
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #33323D;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.site-header__nav-link:hover {
+  color: #5FB4A2;
+  opacity: 0.8;
+}
+
+.site-header__nav-link:active {
+  color: black;
+  opacity: 0.8;
+}
+
+.site-header__hamburger {
+  border: none;
+  background-color: transparent;
+  display: none;
+  cursor: pointer;
+  background-image: url(/images/hamburger.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+}
+
+@media only screen and (max-width: 689px) {
+  .site-header {
+    position: relative;
+    padding: 18px 0;
+  }
+  .site-header__nav {
+    display: none;
+  }
+  .site-header__hamburger {
+    display: inline-block;
+  }
+  .site-header--open .site-header__nav {
+    position: absolute;
+    display: block;
+    padding: 40px;
+    top: 100%;
+    left: 0%;
+    background-color: #0E8784;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .site-header--open .site-header__nav-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .site-header--open .site-header__hamburger {
+    background-image: url(/images/arrows-to-circle-solid.svg);
+  }
+  .site-header--open .site-header__nav-link {
+    color: beige;
+    margin-bottom: 130px;
+  }
+}
+
 .main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
