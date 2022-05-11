@@ -1,0 +1,31 @@
+.hero {
+    &__left {
+        margin-top: 20px;
+        background-image: url(/images/Bitmap@2x.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 5px;
+    }
+
+    &__box {
+        max-width: 445px;
+        padding-top: 243px;
+        margin-left: 8px;
+        padding-bottom: 116px;
+    }
+
+    &__heading {
+        margin: 0;
+        margin-bottom: 32px;
+        font-family: 'Ibarra Real Nova';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 50px;
+        letter-spacing: -0.446429px;
+        color: #33323D;
+
+
+    }
+}
