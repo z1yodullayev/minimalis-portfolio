@@ -1,5 +1,7 @@
 .hero {
-    &__left {
+    &__container {
+        width: 1110px;
+        height: 600px;
         margin-top: 20px;
         background-image: url(/images/Bitmap@2x.jpg);
         background-repeat: no-repeat;
@@ -8,16 +10,25 @@
         border-radius: 5px;
     }
 
-    &__box {
-        max-width: 445px;
+    &__left {
+        width: 445px;
+        height: 357px;
         padding-top: 243px;
         margin-left: 8px;
         padding-bottom: 116px;
+
+    }
+
+    &__box {
+        margin-left: -29px;
+        background-color: #fff;
     }
 
     &__heading {
+        max-width: 390px;
         margin: 0;
-        margin-bottom: 32px;
+        margin-bottom: 70px;
+        margin-top: 40px;
         font-family: 'Ibarra Real Nova';
         font-style: normal;
         font-weight: 700;
@@ -25,7 +36,32 @@
         line-height: 50px;
         letter-spacing: -0.446429px;
         color: #33323D;
-
-
+    }
+    &__btn {
+        width: 200px;
+        height: 48px;
     }
 }
+@media only screen and (max-width:689px) {
+    .hero {
+        &__container {
+            width: 688px;
+            height: 600px;
+            margin-top: 20px;
+            background-image: url(/images/table-bitmab.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 5px;
+        }
+        &__left {
+            width: 514px;
+            height: 278px;
+            padding-top: 243px;
+            margin-left: 8px;
+            padding-bottom: 116px;
+
+        }
+
+}
+ }
